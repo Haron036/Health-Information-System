@@ -1,0 +1,368 @@
+.registration-form {
+    background-color: green;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+    width: 300px;
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+}
+
+.registration-form h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    grid-column: 1 / -1;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px;
+    align-items: center;
+}
+
+.form-group label {
+    text-align: left;
+    font-weight: bold;
+    color: black;
+    font-size: 0.9em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"] {
+    padding: 6px;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    box-sizing: border-box;
+    justify-self: end;
+    font-size: 0.9em;
+}
+
+.registration-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 80%;
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+.registration-form button:hover {
+    background-color: #0056b3;
+}
+
+/* CSS properties for CreateProgramForm */
+.create-program-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin: 20px auto;
+}
+
+.create-program-form h2 {
+    color: #28a745;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.create-program-form .form-group {
+    margin-bottom: 15px;
+    display: block;
+}
+
+.create-program-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #343a40;
+    text-align: left;
+}
+
+.create-program-form .form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.create-program-form .form-group input[type="text"]:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.create-program-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.create-program-form button:hover {
+    background-color: #1e7e34;
+}
+/* ... your existing CSS ... */
+
+/* CSS for EnrollmentForm */
+.enrollment-form {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 20px auto;
+}
+
+.enrollment-form h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.enrollment-form .form-group {
+    margin-bottom: 15px;
+}
+
+.enrollment-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.enrollment-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.enrollment-form select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Style the container for each checkbox and label */
+.enrollment-form .program-option {
+    display: flex; /* Use flexbox for alignment within each program option */
+    align-items: center; /* Vertically align checkbox and label */
+    justify-content: space-between; /* Push checkbox to left, label to right */
+    margin-bottom: 8px; /* Add some spacing between program options */
+}
+
+.enrollment-form .program-option input[type="checkbox"] {
+    margin-right: 10px; /* Add some space between checkbox and label */
+    margin-left: 0; /* Ensure checkbox is on the left */
+}
+
+.enrollment-form .program-option label {
+    margin-bottom: 0; /* Remove default label margin */
+    text-align: right; /* Align program name to the right */
+    flex-grow: 1; /* Allow label to take up available space */
+}
+
+
+.enrollment-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.enrollment-form button:hover {
+    background-color: #0056b3;
+}
+/* CSS for ClientSearch component */
+.client-search {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the component */
+}
+
+.client-search h2 {
+    color: #007bff; /* Blue heading */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.client-search .form-group {
+    margin-bottom: 15px;
+}
+
+.client-search .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #343a40; /* Dark grey label text */
+}
+
+.client-search .form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da; /* Light grey border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.client-search .form-group input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle blue shadow on focus */
+}
+
+.client-search h3 {
+    color: #28a745; /* Green heading for results */
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.client-search ul {
+    list-style: none;
+    padding: 0;
+}
+
+.client-search ul li {
+    display: flex;
+    justify-content: space-between; /* Space out name and button */
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee; /* Light separator between results */
+}
+
+.client-search ul li:last-child {
+    border-bottom: none; /* Remove separator from the last item */
+}
+
+.client-search ul li button {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.client-search ul li button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.client-search p {
+    color: #dc3545; /* Red color for "No clients found" message */
+    margin-top: 10px;
+}
+/* Enhanced styles for enrollment and search */
+.error-message {
+    color: #dc3545;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f8d7da;
+    border-radius: 4px;
+}
+
+.programs-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.program-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.program-option input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.search-results {
+    margin-top: 15px;
+}
+
+.search-results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.search-results li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.client-info {
+    flex-grow: 1;
+}
+
+.client-programs {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+.view-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.view-button:hover {
+    background-color: #218838;
+}
+/* Add to styles.css */
+.Toastify__toast-container {
+    width: 320px;
+  }
+  
+  .Toastify__toast {
+    border-radius: 4px;
+    font-family: inherit;
+  }
+  
+  .Toastify__toast--success {
+    background-color: #28a745;
+  }
+  
+  .Toastify__toast--error {
+    background-color: #dc3545;
+  }
