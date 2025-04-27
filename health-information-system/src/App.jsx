@@ -20,7 +20,7 @@ function App() {
         const fetchInitialData = async () => {
             setLoading(true);
             try {
-                const programsResponse = await fetch('http://localhost:4000/api/programs');
+                const programsResponse = await fetch('https://backend-rqk9.onrender.com/api/programs');
                 if (programsResponse.ok) {
                     const programsData = await programsResponse.json();
                     setHealthPrograms(programsData);
@@ -28,7 +28,7 @@ function App() {
                     showErrorToast('Failed to load programs.');
                 }
 
-                const clientsResponse = await fetch('http://localhost:4000/api/clients');
+                const clientsResponse = await fetch('https://backend-rqk9.onrender.com/api/clients');
                 if (clientsResponse.ok) {
                     const clientsData = await clientsResponse.json();
                     setRegisteredClients(clientsData);
@@ -52,7 +52,7 @@ function App() {
 
     const fetchEnrollments = async () => {
         try {
-            const response = await fetch('http://localhost:4000/api/enrollments');
+            const response = await fetch('https://backend-rqk9.onrender.com/api/enrollments');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -68,7 +68,7 @@ function App() {
     const handleProgramCreated = async (newProgramName) => {
         setLoading(true);
         try {
-            const response = await fetch('http://localhost:4000/api/programs', {
+            const response = await fetch('https://backend-rqk9.onrender.com/api/programs', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ function App() {
     const handleClientRegistered = async (clientData) => {
         setLoading(true);
         try {
-            const response = await fetch('http://localhost:4000/api/clients', {
+            const response = await fetch('https://backend-rqk9.onrender.com/api/clients', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ function App() {
     const handleClientEnrolled = async (clientId, programIds) => {
         setLoading(true);
         try {
-            const response = await fetch('http://localhost:4000/api/enrollments', {
+            const response = await fetch('https://backend-rqk9.onrender.com/api/enrollments', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ clientId, programIds })
@@ -135,7 +135,7 @@ function App() {
             await fetchEnrollments(); // Refetch enrollments to update the global state
             // Optionally refetch client profile to show updated enrollments immediately
             if (selectedClientProfile?._id === clientId) {
-                const clientRes = await fetch(`http://localhost:4000/api/clients/${clientId}`);
+                const clientRes = await fetch(`https://backend-rqk9.onrender.com/api/clients/${clientId}`);
                 if (clientRes.ok) {
                     const clientData = await clientRes.json();
                     setSelectedClientProfile(clientData.client);
@@ -152,7 +152,7 @@ function App() {
     const handleClientSelect = async (client) => {
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:4000/api/clients/${client._id}`);
+            const response = await fetch(`https://backend-rqk9.onrender.com/api/clients/${client._id}`);
             if (!response.ok) {
                 showErrorToast('Failed to load client profile.');
                 return;

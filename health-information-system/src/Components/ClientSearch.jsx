@@ -20,7 +20,7 @@ function ClientSearch({ clients, onClientSelect }) {
         setSelectedClient(client);
 
         try {
-            const response = await fetch(`http://localhost:4000/api/clients/${client._id}`);
+            const response = await fetch(`https://backend-rqk9.onrender.com/api/clients/${client._id}`);
             if (!response.ok) throw new Error('Failed to fetch client');
 
             const data = await response.json();
