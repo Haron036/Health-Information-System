@@ -27,7 +27,7 @@ function RegistrationForm({ onClientRegistered }) {
         console.log('Date of Birth being sent:', formData.dateOfBirth);
         
         try {
-          const response = await fetch('https://health-information-system-d60z.onrender.com/api/clients', {
+          const response = await fetch('https://backend-rqk9.onrender.com/api/clients', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

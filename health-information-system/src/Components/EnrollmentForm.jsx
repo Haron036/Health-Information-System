@@ -1,157 +1,137 @@
-// import React, { useState, useEffect } from 'react';
-// import './styles.css'; // You might have a separate CSS file
 
-// function EnrollmentForm({ onClientEnrolled }) {
-//     const [clients, setClients] = useState([]);
-//     const [programs, setPrograms] = useState([]);
-//     const [selectedClientId, setSelectedClientId] = useState('');
-//     const [selectedProgramIds, setSelectedProgramIds] = useState([]);
-//     const { showSuccessToast, showErrorToast } = useToast(); // Use the custom hook
-//       const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState(null);
 
-//     useEffect(() => {
-//         const fetchClientsAndPrograms = async () => {
-//              setLoading(true);
-//       setError(null);
-//             try {
-//                 // Fetch clients
-//                 const clientsResponse = await fetch('http://localhost:4000/api/clients');
-//                  if (!clientsResponse.ok) {
-//             throw new Error(`Failed to fetch clients: ${clientsResponse.status}`);
-//         }
-//                 const clientsData = await clientsResponse.json();
-//                 setClients(clientsData);
 
-//                 // Fetch programs
-//                 const programsResponse = await fetch('http://localhost:4000/api/programs');
-//                  if (!programsResponse.ok) {
-//           throw new Error(`Failed to fetch programs: ${programsResponse.status}`);
-//         }
-//                 const programsData = await programsResponse.json();
-//                 setPrograms(programsData);
-//             } catch (error) {
-//                  setError(error.message);
-//           showErrorToast(`Error loading data: ${error.message}`);
-//             } finally {
-//                   setLoading(false);
-//             }
-//         };
 
-//         fetchClientsAndPrograms();
-//     }, []);
 
-//     const handleClientChange = (e) => {
-//         setSelectedClientId(e.target.value);
-//     };
 
-//     const handleProgramChange = (e) => {
-//         const programId = e.target.value;
-//         const isChecked = e.target.checked;
 
-//         if (isChecked) {
-//             setSelectedProgramIds([...selectedProgramIds, programId]);
-//         } else {
-//             setSelectedProgramIds(selectedProgramIds.filter(id => id !== programId));
-//         }
-//     };
 
-//   const handleEnrollClient = async (event) => {
-//     event.preventDefault();
 
-//     if (!selectedClientId) {
-//       showErrorToast('Please select a client.');
-//       return;
-//     }
-//     if (selectedProgramIds.length === 0) {
-//       showErrorToast('Please select at least one program.');
-//       return;
-//     }
-//     if (response.ok) {
-//       const enrolledData = await response.json();
-//       showSuccessToast('Client enrolled successfully!');
-//       setSelectedClientId('');
-//       setSelectedProgramIds([]);
-//       onClientEnrolled(enrolledData); // <-- Call App.jsx function
-//     }
-  
 
-//     try {
-//       const response = await fetch('http://localhost:4000/api/enrollments', {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify({
-//           clientId: selectedClientId,
-//           programIds: selectedProgramIds,
-//         }),
-//       });
 
-//       const data = await response.json();
 
-//       if (response.ok) {
-//         showSuccessToast('Client enrolled successfully!');
-//         setSelectedClientId('');
-//         setSelectedProgramIds([]);
-//       } else {
-//         showErrorToast(`Failed to enroll client: ${data.error || 'Unknown error'}`);
-//       }
-//     } catch (error) {
-//       showErrorToast(`Error enrolling client: ${error.message}`);
-//       console.error('Error enrolling client:', error);
-//     }
-//   };
 
-//     if (loading) {
-//         return <div>Loading...</div>;
-//     }
 
-//       if (error) {
-//         return <div>Error: {error}</div>;
-//     }
 
-//     return (
-//         <form className="enrollment-form" onSubmit={handleEnrollClient}>
-//             <h2>Enroll Client in Programs</h2>
 
-//             <div className="form-group">
-//                 <label htmlFor="client">Select Client:</label>
-//                 <select id="client" value={selectedClientId} onChange={handleClientChange}>
-//                     <option value="">-- Select a Client --</option>
-//                     {clients.map((client) => (
-//                         <option key={client._id} value={client._id}>
-//                             {client.firstName} {client.lastName}
-//                         </option>
-//                     ))}
-//                 </select>
-//             </div>
 
-//             <div className="form-group">
-//                 <label>Select Program(s):</label>
-//                 <div>
-//                     {programs.map((program) => (
-//                         <div key={program._id}>
-//                             <input
-//                                 type="checkbox"
-//                                 id={`program-${program._id}`}
-//                                 name="programs"
-//                                 value={program._id}
-//                                 checked={selectedProgramIds.includes(program._id)}
-//                                 onChange={handleProgramChange}
-//                             />
-//                             <label htmlFor={`program-${program._id}`}>{program.name}</label>
-//                         </div>
-//                     ))}
-//                 </div>
-//             </div>
 
-//             <button type="submit" >Enroll Client</button>
-//         </form>
-//     );
-// }
 
-// export default EnrollmentForm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 import React, { useState } from 'react';
