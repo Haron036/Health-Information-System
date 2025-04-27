@@ -24,6 +24,7 @@ function RegistrationForm({ onClientRegistered }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
+        console.log('Date of Birth being sent:', formData.dateOfBirth);
         
         try {
           const response = await fetch('http://localhost:4000/api/clients', {
@@ -132,4 +133,3 @@ function RegistrationForm({ onClientRegistered }) {
 }
 
 export default RegistrationForm;
-

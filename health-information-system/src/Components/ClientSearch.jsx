@@ -8,24 +8,24 @@ function ClientSearch({ clients, onClientSelect }) {
     const [enrolledPrograms, setEnrolledPrograms] = useState([]);
 
     const handleSearchChange = (e) => {
-        const term = e.target.value.toLowerCase();
+        const term = e.target.value; 
         setSearchTerm(term);
         const results = clients.filter(client =>
-            `${client.firstName} ${client.lastName}`.toLowerCase().includes(term)
+            `${client.firstName} ${client.lastName}`.includes(term) 
         );
         setSearchResults(results);
     };
 
     const handleClientSelect = async (client) => {
         setSelectedClient(client);
-        
+
         try {
             const response = await fetch(`http://localhost:4000/api/clients/${client._id}`);
             if (!response.ok) throw new Error('Failed to fetch client');
-            
+
             const data = await response.json();
             setEnrolledPrograms(data.enrolledPrograms || []);
-            
+
             // Update parent component if needed
             if (onClientSelect) onClientSelect(data.client);
         } catch (error) {
@@ -33,6 +33,7 @@ function ClientSearch({ clients, onClientSelect }) {
             setEnrolledPrograms([]);
         }
     };
+
     return (
         <div className="client-search">
             <h2>Search for Client</h2>
