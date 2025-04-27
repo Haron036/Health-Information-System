@@ -190,7 +190,7 @@ function EnrollmentForm({ clients, programs, onClientEnrolled }) {
         }
       
         try {
-          const response = await fetch('http://localhost:4000/api/enrollments', {
+          const response = await fetch('https://backend-rqk9.onrender.com/api/enrollments', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
